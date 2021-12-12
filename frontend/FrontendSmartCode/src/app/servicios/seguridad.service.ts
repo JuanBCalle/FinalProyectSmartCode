@@ -30,7 +30,7 @@ export class SeguridadService {
   }
 
   Identificar(usuario:string,clave:string):Observable<ModeloIdentificar>{
-    return this.http.post<ModeloIdentificar>('${this.url}/IdentificarEmpleado',{
+    return this.http.post<ModeloIdentificar>(`${this.url}/IdentificarEmpleado`,{
       usuario: usuario,
       clave: clave
     },{

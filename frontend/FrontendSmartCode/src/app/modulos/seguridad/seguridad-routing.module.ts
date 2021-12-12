@@ -7,26 +7,26 @@ import { IdentificacionComponent } from './identificacion/identificacion.compone
 const routes: Routes = [
   {
     path:"",
-    redirectTo:'/inicio',
+    redirectTo:"/inicio",
     pathMatch:"full"
   },
   {
-    path:'identificar',
+    path:"identificar",
     component:IdentificacionComponent,
     pathMatch:"full"
   },
   {
-    path:'seguridad',
+    path:"seguridad",
     loadChildren: ()=> import("./seguridad.module").then(x=>x.SeguridadModule),
     pathMatch:"full"
   },
   {
-    path:'cerrar-sesion',
+    path:"cerrar-sesion",
     component:CerrarSesionComponent,
     pathMatch:"full"
   },
   {
-    path:'cambio-clave',
+    path:"cambio-clave",
     component:CambioClaveComponent,
     pathMatch:"full"
   }

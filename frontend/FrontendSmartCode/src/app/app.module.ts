@@ -6,7 +6,8 @@ import { AppComponent } from './app.component';
 import { BarraNavegacionComponent } from './plantilla/barra-navegacion/barra-navegacion.component';
 import { PiePaginaComponent } from './plantilla/pie-pagina/pie-pagina.component';
 import { InicioComponent } from './plantilla/inicio/inicio.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { ErrorComponent } from './plantilla/error/error.component'
 
 //import { IdentificacionComponent } from './modulos/seguridad/identificacion/identificacion.component';
 
@@ -17,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http'
     PiePaginaComponent,
     BarraNavegacionComponent,
     //IdentificacionComponent,
-    InicioComponent
+    InicioComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
