@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ModeloIdentificar } from '../Modelos/identificar.modelo';
+import { ModeloDatos } from '../Modelos/datos.modelo';
 
 @Injectable({
   providedIn: 'root'
@@ -16,8 +17,12 @@ export class SeguridadService {
   VerificarSesionActual(){
     let datos= this.ObtenerInformacionSesion();
     if (datos){
-      this.datosUsuarioEnSesion.next(datos);
+      this.RefrescarDatosSesion(datos);
     }
+  }
+
+  RefrescarDatosSesion(datos:ModeloIdentificar){
+    this.datosUsuarioEnSesion.next(datos);
   }
 
   ObtenerDatosUsuarioEnSesion(){
@@ -36,8 +41,10 @@ export class SeguridadService {
   }
 
   AlmacenarSesion(datos:ModeloIdentificar){
+    datos.estaIdentificado=true;
     let stringDatos= JSON.stringify(datos);
     localStorage.setItem("datosSesion",stringDatos);
+    this.RefrescarDatosSesion(datos);
   }
 
   ObtenerInformacionSesion(){
@@ -52,6 +59,7 @@ export class SeguridadService {
 
   EliminarInformacionSesion(){
     localStorage.removeItem("datosSesion");
+    this.RefrescarDatosSesion(new ModeloIdentificar());
   }
 
   SeHaIniciadoSesion(){

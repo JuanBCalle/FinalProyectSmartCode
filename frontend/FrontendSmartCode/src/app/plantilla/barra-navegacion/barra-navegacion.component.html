@@ -9,19 +9,22 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li ="nav-item active" *ngIf="!seInicioSesion">
-        <a class="navbar-brand" routerLink="/IdentificarEmpleado">Login</a>
+        <a class="navbar-brand" routerLink="/identificar">Login</a>
         </li>
         <li class="nav-item active" *ngIf="seInicioSesion">
             <a class="navbar-brand" routerLink="/seguridad/cerrar-sesion">Logut</a>
         </li>
         <li class="nav-item active" *ngIf="seInicioSesion">
-          <a class="nav-link" routerLink="/IdentificarEmpleado">Empresa</a>
+          <a class="navbar-brand" routerLink="/seguridad/cambio-clave">Update Password</a>
+      </li>
+        <li class="nav-item active" *ngIf="seInicioSesion">
+          <a class="nav-link" routerLink="/administracion/empresa">Empresa</a>
         </li>
         <li class="nav-item" *ngIf="seInicioSesion">
-          <a class="nav-link" routerLink="/IdentificarEmpleado">Empleado</a>
+          <a class="nav-link" routerLink="/administracion/empleado">Empleado</a>
         </li>
         <li class="nav-item" *ngIf="seInicioSesion">
-          <a class="nav-link" routerLink="/IdentificarEmpleado">Proveedor</a>
+          <a class="nav-link" routerLink="/administracion/proveedor">Proveedor</a>
         </li>
       </ul>
     </div>
