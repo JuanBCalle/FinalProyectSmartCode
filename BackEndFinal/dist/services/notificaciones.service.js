@@ -10,7 +10,7 @@ let NotificacionesService = class NotificacionesService {
      */
     EnviarMensajePorSMS(body, telefono) {
         const accountSid = 'ACc93bf2d968e3f3f7dc81afa861545f1c';
-        const authToken = 'd1013745bea84299b3a21188560420f9';
+        const authToken = '773aecc443b543bfb1e822efe380c86c';
         const twilio = require('twilio');
         const client = new twilio(accountSid, authToken);
         client.messages

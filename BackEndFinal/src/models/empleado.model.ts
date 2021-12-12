@@ -55,7 +55,7 @@ export class Empleado extends Entity {
 
   @property({
     type: 'number',
-    required: true,
+    required: false,
   })
   Sueldo: number;
 
@@ -67,13 +67,13 @@ export class Empleado extends Entity {
 
   @property({
     type: 'boolean',
-    required: true,
+    required: false,
   })
   EsDirectivo: boolean;
 
   @property({
     type: 'boolean',
-    required: true,
+    required: false,
   })
   EsCliente: boolean;
 

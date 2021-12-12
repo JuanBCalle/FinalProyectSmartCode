@@ -70,7 +70,7 @@ let Empleado = class Empleado extends repository_1.Entity {
 (0, tslib_1.__decorate)([
     (0, repository_1.property)({
         type: 'number',
-        required: true,
+        required: false,
     }),
     (0, tslib_1.__metadata)("design:type", Number)
 ], Empleado.prototype, "Sueldo", void 0);
@@ -84,14 +84,14 @@ let Empleado = class Empleado extends repository_1.Entity {
 (0, tslib_1.__decorate)([
     (0, repository_1.property)({
         type: 'boolean',
-        required: true,
+        required: false,
     }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], Empleado.prototype, "EsDirectivo", void 0);
 (0, tslib_1.__decorate)([
     (0, repository_1.property)({
         type: 'boolean',
-        required: true,
+        required: false,
     }),
     (0, tslib_1.__metadata)("design:type", Boolean)
 ], Empleado.prototype, "EsCliente", void 0);
