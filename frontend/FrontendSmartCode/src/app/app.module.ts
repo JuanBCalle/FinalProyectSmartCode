@@ -3,14 +3,26 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BarraNavegacionComponent } from './plantilla/barra-navegacion/barra-navegacion.component';
+import { PiePaginaComponent } from './plantilla/pie-pagina/pie-pagina.component';
+import { InicioComponent } from './plantilla/inicio/inicio.component';
+import {HttpClientModule} from '@angular/common/http'
+
+//import { IdentificacionComponent } from './modulos/seguridad/identificacion/identificacion.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BarraNavegacionComponent,
+    PiePaginaComponent,
+    BarraNavegacionComponent,
+    //IdentificacionComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
